@@ -158,6 +158,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,800&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+    
+    <script>
+      function trackClick(product, lang) {
+        console.log("Tracking click for " + product + " in " + lang);
+        const webhookUrl = "https://eo9q7vzh8f9e0l8.m.pipedream.net";
+        fetch(webhookUrl, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            event: "click",
+            product: product,
+            country: lang,
+            timestamp: new Date().toISOString()
+          })
+        });
+      }
+    </script>
 </head>
 <body>
 
@@ -170,7 +188,10 @@
     <main>
         <div class="product-card">
             <p class="description">A unique sensory experience with precision settings for the perfect coffee, from bean to cup, AI-controlled.</p>
-            <a href="https://amzn.to/3CoffeeStation" class="cta-button" target="_blank">
+            <a href="https://amzn.to/3CoffeeStation" 
+               class="cta-button" 
+               target="_blank"
+               onclick="trackClick('Smart Coffee Station', 'us')">
                 Discover Perfection →
             </a>
             
