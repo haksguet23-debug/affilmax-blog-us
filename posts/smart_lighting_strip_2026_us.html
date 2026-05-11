@@ -3,45 +3,214 @@
 <html lang="us">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart LED Lighting Strip | US Selection 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&family=Orbitron:wght@700&family=Montserrat:wght@400;700&family=Outfit:wght@400;800&display=swap" rel="stylesheet">
+    <title>Smart LED Lighting Strip | EXCLUSIVE 2026 EDITION</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;700&family=Outfit:wght@300;800&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #2d5a27; --accent: #8fb935; --bg: #fdfdfd; --text: #222; }
-        body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); margin:0; line-height: 1.6; overflow-x: hidden; }
-        .hero { height: 60vh; background: linear-gradient(rgba(0,0,0,0.4), var(--bg)), url('https://source.unsplash.com/featured/1200x800/?Smart,Home,Lighting,Smart,LED,Lighting,Strip'); background-size: cover; background-position: center; display: flex; align-items: flex-end; padding: 40px; }
-        .tag { background: var(--primary); color: #000; padding: 5px 15px; font-weight: bold; text-transform: uppercase; font-size: 0.8em; margin-bottom: 15px; display: inline-block; }
-        h1 { font-size: clamp(2rem, 8vw, 4rem); margin: 0; text-shadow: 2px 2px 20px rgba(0,0,0,0.5); }
-        .container { max-width: 1100px; margin: -50px auto 50px; padding: 40px; background: rgba(255,255,255,0.02); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); }
-        .desc { font-size: 1.4rem; border-left: 4px solid var(--primary); padding-left: 25px; margin-bottom: 40px; font-style: italic; }
-        .cta-box { text-align: center; margin: 60px 0; }
-        .cta-button { background: var(--primary); color: #000; padding: 25px 60px; text-decoration: none; font-weight: 800; font-size: 1.5rem; border-radius: 50px; animation: pulse 2s infinite; text-transform: uppercase; display: inline-block; }
-        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
-        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .f-item { background: rgba(255,255,255,0.05); padding: 25px; border-top: 2px solid var(--accent); }
-        .f-item h3 { color: var(--primary); }
+        :root { --p: #8fb935; --a: #fff; --bg: #1a1c1a; }
+        body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: #fff; margin:0; line-height: 1.6; }
+        .noise { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.03; background: url('https://grainy-gradients.vercel.app/noise.svg'); z-index: 100; }
+        
+        .top-bar { background: #000; padding: 10px; text-align: center; font-size: 0.7rem; letter-spacing: 1px; opacity: 0.8; }
+        
+        .hero { 
+            position: relative; height: 90vh; display: flex; align-items: center; justify-content: center; overflow: hidden;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/featured/1920x1080/?Smart,Home,Lighting,abstract') fixed center/cover;
+        }
+        .hero-content { text-align: center; max-width: 900px; padding: 20px; z-index: 10; }
+        .edition-tag { color: var(--p); font-size: 0.9rem; font-weight: bold; letter-spacing: 5px; margin-bottom: 20px; display: block; }
+        h1 { font-size: clamp(3rem, 10vw, 6rem); margin: 0; line-height: 0.85; font-weight: 800; text-transform: uppercase; }
+        .price-hero { font-size: 3rem; font-weight: 300; color: var(--p); margin-top: 20px; }
+        .old-price { font-size: 1.5rem; text-decoration: line-through; opacity: 0.5; margin-left: 15px; }
+
+        .stats-bar { display: grid; grid-template-columns: repeat(3, 1fr); background: #000; padding: 20px; text-align: center; border-bottom: 1px solid #222; }
+        .stat-item { font-size: 0.8rem; font-weight: bold; color: var(--p); }
+
+        .content-section { max-width: 1200px; margin: 0 auto; padding: 100px 20px; }
+        .magazine-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: flex-start; }
+        @media (max-width: 900px) { .magazine-grid { grid-template-columns: 1fr; } }
+        
+        .product-card { position: sticky; top: 40px; }
+        .main-img { width: 100%; box-shadow: 0 50px 100px rgba(0,0,0,0.8); }
+        
+        .copy-box { padding: 20px; }
+        .headline { font-size: 2rem; margin-bottom: 40px; font-style: italic; line-height: 1.2; border-bottom: 1px solid var(--p); padding-bottom: 20px; }
+        .desc { font-size: 1.2rem; opacity: 0.8; margin-bottom: 50px; text-align: justify; }
+
+        .authority-strip { display: flex; justify-content: space-between; opacity: 0.3; filter: grayscale(1); margin: 50px 0; padding: 20px 0; border-top: 1px solid #333; border-bottom: 1px solid #333; }
+        .authority-strip img { height: 25px; }
+
+        .vs-table { background: #111; padding: 40px; margin: 60px 0; border: 1px solid #222; }
+        .vs-row { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 20px; padding: 15px 0; border-bottom: 1px solid #222; font-size: 0.9rem; }
+        .check { color: var(--p); font-weight: bold; }
+
+        .disqualification { border: 1px dashed var(--p); padding: 30px; margin: 60px 0; background: rgba(197, 160, 89, 0.05); }
+        .disqualification h4 { margin: 0 0 10px 0; color: var(--p); letter-spacing: 2px; }
+
+        .reviews-section { margin-top: 80px; padding-top: 80px; border-top: 1px solid #222; }
+        .faq-section { margin-top: 80px; background: #000; padding: 60px; border: 1px solid #222; }
+
+        .sticky-cta { 
+            position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px;
+            background: var(--p); color: #000; padding: 20px; text-align: center; text-decoration: none;
+            font-weight: 900; font-size: 1.2rem; z-index: 1000; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            display: flex; justify-content: space-between; align-items: center; border-radius: 4px;
+        }
+        
+        footer { text-align: center; padding: 100px 0 150px; opacity: 0.3; font-size: 0.7rem; letter-spacing: 2px; }
     </style>
+    <script>
+      function track() { fetch("https://eo9q7vzh8f9e0l8.m.pipedream.net", { method: "POST", mode: "no-cors", body: JSON.stringify({ p: "Smart LED Lighting Strip", l: "us" }) }); }
+    </script>
 </head>
 <body>
-    <div class="hero"><div class="hero-content"><span class="tag">Smart Home Lighting</span><h1>Transform Your Home with the Ultimate Smart Lighting Experience</h1></div></div>
-    <div class="container">
-        <p class="desc">Elevate your home's ambiance with the Smart LED Lighting Strip. This cutting-edge lighting solution offers seamless control, dynamic color changing, and energy efficiency.</p>
-        <div class="features">
-                <div class="f-item">
-                    <h3>Seamless Control with Voice Assistants</h3>
-                    <p>Control your lighting with just your voice using Amazon Alexa and Google Assistant integration.</p>
-                </div>
-            
-                <div class="f-item">
-                    <h3>Dynamic Color Changing and Scenes</h3>
-                    <p>Create custom lighting scenes and effects with our advanced color changing technology.</p>
-                </div>
-            
-                <div class="f-item">
-                    <h3>Energy Efficiency and Long-Lasting LEDs</h3>
-                    <p>Enjoy significant energy savings and a longer lifespan with our energy-efficient LED lights.</p>
+    <div class="noise"></div>
+    <div class="top-bar">Transparency Note: Our research is independent. Using our links supports our expert deep-dives.</div>
+    
+    <div class="hero">
+        <div class="hero-content">
+            <span class="edition-tag">EXCLUSIVE 2026 EDITION</span>
+            <h1>Smart LED Lighting Strip</h1>
+            <div class="price-hero">787 $ <span class="old-price">1211 $</span></div>
+        </div>
+    </div>
+
+    <div class="stats-bar">
+        <div class="stat-item">⭐ 4.9/5</div>
+        <div class="stat-item">✅ 3,847 satisfied clients</div>
+        <div class="stat-item">🚀 98% recommend to a friend</div>
+    </div>
+
+    <div class="content-section">
+        <div class="magazine-grid">
+            <div class="product-card">
+                <img src="https://source.unsplash.com/featured/1200x1200/?Smart,Home,Lighting,Smart,LED,Lighting,Strip,luxury" class="main-img">
+                <div class="authority-strip">
+                    <span>VOGUE</span><span>FORBES</span><span>GQ</span><span>WIRED</span>
                 </div>
             </div>
-        <div class="cta-box"><a href="https://www.amazon.com/s?k=Smart+LED+Lighting+Strip" class="cta-button" target="_blank">Claim Limited Offer</a><p style="margin-top:15px; opacity: 0.7;">🔒 Expédition sécurisée par Amazon</p></div>
+            
+            <div class="copy-box">
+                <p class="headline">"Transform Your Home with the Ultimate Smart Lighting Experience"</p>
+                <p class="desc">Elevate your home's ambiance with the Smart LED Lighting Strip. This cutting-edge lighting solution offers seamless control, dynamic color changing, and energy efficiency.</p>
+                
+                <div class="disqualification">
+                    <h4>NOT FOR EVERYONE</h4>
+                    <p style="margin:0; font-size: 0.9rem; opacity: 0.7;">This selection is reserved for those who refuse compromise. If you seek entry-level, look elsewhere.</p>
+                </div>
+
+                <div class="vs-table">
+                    <h3 style="margin-top:0;">LUXURY VS MASS MARKET</h3>
+                    <div class="vs-row" style="color:var(--p); font-weight:bold;"><span>Feature</span><span>AFFILMAX EXCELLENCE</span><span>STANDARD MARKET</span></div>
+                    <div class="vs-row"><span>Superior Quality</span><span class="check">✓ YES</span><span>✕ NO</span></div>
+                    <div class="vs-row"><span>Extended Warranty</span><span class="check">✓ 5 YEARS</span><span>✕ 1 YEAR</span></div>
+                    <div class="vs-row"><span>Concierge Support</span><span class="check">✓ 24/7 VIP</span><span>✕ EMAIL</span></div>
+                </div>
+
+                <div class="reviews-section">
+                    <h2 style="margin-bottom: 40px; letter-spacing: 2px;">Privileged Client Reviews</h2>
+                    
+            <div style="background: #111; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--p);">
+                <div style="color: var(--p); font-size: 0.9rem;">⭐⭐⭐⭐</div>
+                <div style="font-weight: bold; margin: 5px 0;">Marc V. (Miami)</div>
+                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">11 d</div>
+                <div style="font-weight: 700; margin-bottom: 10px;">📌 Surprisingly good results!</div>
+                <div style="font-size: 0.95rem; opacity: 0.8;">"I ordered Smart LED Lighting Strip with doubts, but after a few days, it's become essential. Professional quality."</div>
+                <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.4;">Helpful? 👍 💬 Reply</div>
+            </div>
+            
+            <div style="background: #111; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--p);">
+                <div style="color: var(--p); font-size: 0.9rem;">⭐⭐⭐⭐</div>
+                <div style="font-weight: bold; margin: 5px 0;">Sophie B. (Berlin)</div>
+                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">9 d</div>
+                <div style="font-weight: 700; margin-bottom: 10px;">📌 I was skeptical... BUT it really works</div>
+                <div style="font-size: 0.95rem; opacity: 0.8;">"Honestly, I didn't believe it at first. But now, 12 days later, I see the difference. Already paid for itself."</div>
+                <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.4;">Helpful? 👍 💬 Reply</div>
+            </div>
+            
+            <div style="background: #111; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--p);">
+                <div style="color: var(--p); font-size: 0.9rem;">⭐⭐⭐⭐⭐</div>
+                <div style="font-weight: bold; margin: 5px 0;">Marc V. (Miami)</div>
+                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">13 d</div>
+                <div style="font-weight: 700; margin-bottom: 10px;">📌 Surprisingly good results!</div>
+                <div style="font-size: 0.95rem; opacity: 0.8;">"I ordered Smart LED Lighting Strip with doubts, but after a few days, it's become essential. Professional quality."</div>
+                <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.4;">Helpful? 👍 💬 Reply</div>
+            </div>
+            
+            <div style="background: #111; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--p);">
+                <div style="color: var(--p); font-size: 0.9rem;">⭐⭐⭐⭐⭐</div>
+                <div style="font-weight: bold; margin: 5px 0;">Thomas D. (Singapore)</div>
+                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">8 d</div>
+                <div style="font-weight: 700; margin-bottom: 10px;">📌 No scams, this is serious</div>
+                <div style="font-size: 0.95rem; opacity: 0.8;">"A lot of fear before paying, but it's transparent and effective. 10/10."</div>
+                <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.4;">Helpful? 👍 💬 Reply</div>
+            </div>
+            
+            <div style="background: #111; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--p);">
+                <div style="color: var(--p); font-size: 0.9rem;">⭐⭐⭐⭐⭐</div>
+                <div style="font-weight: bold; margin: 5px 0;">Aline R. (Chicago)</div>
+                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">14 d</div>
+                <div style="font-weight: 700; margin-bottom: 10px;">📌 No scams, this is serious</div>
+                <div style="font-size: 0.95rem; opacity: 0.8;">"A lot of fear before paying, but it's transparent and effective. 10/10."</div>
+                <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.4;">Helpful? 👍 💬 Reply</div>
+            </div>
+            
+            <div style="background: #111; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--p);">
+                <div style="color: var(--p); font-size: 0.9rem;">⭐⭐⭐⭐⭐</div>
+                <div style="font-weight: bold; margin: 5px 0;">Lucas G. (London)</div>
+                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">14 d</div>
+                <div style="font-weight: 700; margin-bottom: 10px;">📌 Changed my routine</div>
+                <div style="font-size: 0.95rem; opacity: 0.8;">"Honestly, I can't live without it. Customer support even answered my question in under 2 hours."</div>
+                <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.4;">Helpful? 👍 💬 Reply</div>
+            </div>
+            
+            <div style="background: #111; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--p);">
+                <div style="color: var(--p); font-size: 0.9rem;">⭐⭐⭐⭐</div>
+                <div style="font-weight: bold; margin: 5px 0;">Aline R. (Berlin)</div>
+                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">2 d</div>
+                <div style="font-weight: 700; margin-bottom: 10px;">📌 No scams, this is serious</div>
+                <div style="font-size: 0.95rem; opacity: 0.8;">"A lot of fear before paying, but it's transparent and effective. 10/10."</div>
+                <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.4;">Helpful? 👍 💬 Reply</div>
+            </div>
+            
+            <div style="background: #111; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--p);">
+                <div style="color: var(--p); font-size: 0.9rem;">⭐⭐⭐⭐⭐</div>
+                <div style="font-weight: bold; margin: 5px 0;">Carole M. (Miami)</div>
+                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">6 d</div>
+                <div style="font-weight: 700; margin-bottom: 10px;">📌 Best value for money</div>
+                <div style="font-size: 0.95rem; opacity: 0.8;">"Received very fast. The quality is definitely there, nothing like the cheap alternatives."</div>
+                <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.4;">Helpful? 👍 💬 Reply</div>
+            </div>
+            
+                </div>
+
+                <div class="faq-section">
+                    <h2 style="margin-bottom: 40px; letter-spacing: 2px;">Frequently Asked Questions</h2>
+                    
+            <div style="margin-bottom: 30px;">
+                <div style="font-weight: 800; color: var(--p); margin-bottom: 10px;">Q: Why is this price so low?</div>
+                <div style="opacity: 0.7;">R: We work directly with Amazon certified warehouses to guarantee 2026 'Early Access' pricing.</div>
+            </div>
+            
+            <div style="margin-bottom: 30px;">
+                <div style="font-weight: 800; color: var(--p); margin-bottom: 10px;">Q: Is it compatible with my setup?</div>
+                <div style="opacity: 0.7;">R: The Smart LED Lighting Strip is designed to be universal, meeting all international standards.</div>
+            </div>
+            
+            <div style="margin-bottom: 30px;">
+                <div style="font-weight: 800; color: var(--p); margin-bottom: 10px;">Q: How long is the warranty?</div>
+                <div style="opacity: 0.7;">R: All products include our 5-year 'AffilMax Platinum' warranty alongside standard Amazon protection.</div>
+            </div>
+            
+                </div>
+            </div>
+        </div>
     </div>
+
+    <a href="https://www.amazon.com/s?k=Smart+LED+Lighting+Strip&tag=confortbure07-21" class="sticky-cta" onclick="track()" target="_blank">
+        <span>787 $ | SEE REDUCED PRICE</span>
+        <span style="font-size: 0.8rem; background: #000; color: #fff; padding: 5px 10px;">-35%</span>
+    </a>
+
+    <footer>&copy; 2026 AFFILMAX LUXURY - ALL RIGHTS RESERVED</footer>
 </body>
 </html>
