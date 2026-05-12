@@ -59,7 +59,19 @@
         footer { text-align: center; padding: 100px 0 150px; opacity: 0.3; font-size: 0.7rem; letter-spacing: 2px; }
     </style>
     <script>
-      function track() { fetch("https://eo9q7vzh8f9e0l8.m.pipedream.net", { method: "POST", mode: "no-cors", body: JSON.stringify({ p: "Cryotherapy Chamber Pro: Unlock the Power of Cold Therapy", l: "us" }) }); }
+      function track() {
+        const data = { p: "Cryotherapy Chamber Pro: Unlock the Power of Cold Therapy", l: "us", t: new Date().toISOString() };
+        if (navigator.sendBeacon) {
+          navigator.sendBeacon("https://eo9q7vzh8f9e0l8.m.pipedream.net", JSON.stringify(data));
+        } else {
+          fetch("https://eo9q7vzh8f9e0l8.m.pipedream.net", { 
+            method: "POST", 
+            body: JSON.stringify(data),
+            headers: { "Content-Type": "application/json" },
+            keepalive: true
+          }).catch(() => {});
+        }
+      }
     </script>
 </head>
 <body>
@@ -70,7 +82,7 @@
         <div class="hero-content">
             <span class="edition-tag">EXCLUSIVE 2026 EDITION</span>
             <h1>Cryotherapy Chamber Pro: Unlock the Power of Cold Therapy</h1>
-            <div class="price-hero">2639 $ <span class="old-price">3665 $</span></div>
+            <div class="price-hero">1499 $ <span class="old-price">2498 $</span></div>
         </div>
     </div>
 
@@ -111,44 +123,26 @@
                     
             <div style="background: #111; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--p);">
                 <div style="color: var(--p); font-size: 0.9rem;">⭐⭐⭐⭐⭐</div>
-                <div style="font-weight: bold; margin: 5px 0;">Lucas G. (Berlin)</div>
-                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">5 d</div>
-                <div style="font-weight: 700; margin-bottom: 10px;">📌 No scams, this is serious</div>
-                <div style="font-size: 0.95rem; opacity: 0.8;">"A lot of fear before paying, but it's transparent and effective. 10/10."</div>
-                <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.4;">Helpful? 👍 💬 Reply</div>
-            </div>
-            
-            <div style="background: #111; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--p);">
-                <div style="color: var(--p); font-size: 0.9rem;">⭐⭐⭐⭐⭐</div>
-                <div style="font-weight: bold; margin: 5px 0;">Aline R. (New York)</div>
-                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">5 d</div>
-                <div style="font-weight: 700; margin-bottom: 10px;">📌 No regrets, highly recommend</div>
-                <div style="font-size: 0.95rem; opacity: 0.8;">"My hesitation lasted 2 hours. Now 8 days later, I absolutely don't regret my choice."</div>
-                <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.4;">Helpful? 👍 💬 Reply</div>
-            </div>
-            
-            <div style="background: #111; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--p);">
-                <div style="color: var(--p); font-size: 0.9rem;">⭐⭐⭐⭐⭐</div>
-                <div style="font-weight: bold; margin: 5px 0;">Thomas D. (Toronto)</div>
-                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">14 d</div>
-                <div style="font-weight: 700; margin-bottom: 10px;">📌 Best value for money</div>
-                <div style="font-size: 0.95rem; opacity: 0.8;">"Received very fast. The quality is definitely there, nothing like the cheap alternatives."</div>
-                <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.4;">Helpful? 👍 💬 Reply</div>
-            </div>
-            
-            <div style="background: #111; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--p);">
-                <div style="color: var(--p); font-size: 0.9rem;">⭐⭐⭐⭐⭐</div>
-                <div style="font-weight: bold; margin: 5px 0;">Carole M. (Sydney)</div>
+                <div style="font-weight: bold; margin: 5px 0;">Émilie C. (London)</div>
                 <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">11 d</div>
-                <div style="font-weight: 700; margin-bottom: 10px;">📌 No regrets, highly recommend</div>
-                <div style="font-size: 0.95rem; opacity: 0.8;">"My hesitation lasted 2 hours. Now 8 days later, I absolutely don't regret my choice."</div>
+                <div style="font-weight: 700; margin-bottom: 10px;">📌 Exactly as described, or better</div>
+                <div style="font-size: 0.95rem; opacity: 0.8;">"The design is sublime and performance is above my expectations. Friends are already asking where I got it."</div>
                 <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.4;">Helpful? 👍 💬 Reply</div>
             </div>
             
             <div style="background: #111; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--p);">
                 <div style="color: var(--p); font-size: 0.9rem;">⭐⭐⭐⭐⭐</div>
-                <div style="font-weight: bold; margin: 5px 0;">Thomas D. (Dubai)</div>
-                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">6 d</div>
+                <div style="font-weight: bold; margin: 5px 0;">Nicolas P. (Sydney)</div>
+                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">3 d</div>
+                <div style="font-weight: 700; margin-bottom: 10px;">📌 Changed my routine</div>
+                <div style="font-size: 0.95rem; opacity: 0.8;">"Honestly, I can't live without it. Customer support even answered my question in under 2 hours."</div>
+                <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.4;">Helpful? 👍 💬 Reply</div>
+            </div>
+            
+            <div style="background: #111; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--p);">
+                <div style="color: var(--p); font-size: 0.9rem;">⭐⭐⭐⭐</div>
+                <div style="font-weight: bold; margin: 5px 0;">Aline R. (Chicago)</div>
+                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">11 d</div>
                 <div style="font-weight: 700; margin-bottom: 10px;">📌 I was skeptical... BUT it really works</div>
                 <div style="font-size: 0.95rem; opacity: 0.8;">"Honestly, I didn't believe it at first. But now, 12 days later, I see the difference. Already paid for itself."</div>
                 <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.4;">Helpful? 👍 💬 Reply</div>
@@ -156,7 +150,16 @@
             
             <div style="background: #111; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--p);">
                 <div style="color: var(--p); font-size: 0.9rem;">⭐⭐⭐⭐⭐</div>
-                <div style="font-weight: bold; margin: 5px 0;">Lucas G. (Sydney)</div>
+                <div style="font-weight: bold; margin: 5px 0;">Isabelle T. (Berlin)</div>
+                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">4 d</div>
+                <div style="font-weight: 700; margin-bottom: 10px;">📌 Changed my routine</div>
+                <div style="font-size: 0.95rem; opacity: 0.8;">"Honestly, I can't live without it. Customer support even answered my question in under 2 hours."</div>
+                <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.4;">Helpful? 👍 💬 Reply</div>
+            </div>
+            
+            <div style="background: #111; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--p);">
+                <div style="color: var(--p); font-size: 0.9rem;">⭐⭐⭐⭐⭐</div>
+                <div style="font-weight: bold; margin: 5px 0;">Carole M. (Singapore)</div>
                 <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">14 d</div>
                 <div style="font-weight: 700; margin-bottom: 10px;">📌 Changed my routine</div>
                 <div style="font-size: 0.95rem; opacity: 0.8;">"Honestly, I can't live without it. Customer support even answered my question in under 2 hours."</div>
@@ -165,17 +168,26 @@
             
             <div style="background: #111; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--p);">
                 <div style="color: var(--p); font-size: 0.9rem;">⭐⭐⭐⭐⭐</div>
-                <div style="font-weight: bold; margin: 5px 0;">Thomas D. (Miami)</div>
-                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">13 d</div>
-                <div style="font-weight: 700; margin-bottom: 10px;">📌 I was skeptical... BUT it really works</div>
-                <div style="font-size: 0.95rem; opacity: 0.8;">"Honestly, I didn't believe it at first. But now, 12 days later, I see the difference. Already paid for itself."</div>
+                <div style="font-weight: bold; margin: 5px 0;">Carole M. (Berlin)</div>
+                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">4 d</div>
+                <div style="font-weight: 700; margin-bottom: 10px;">📌 Exactly as described, or better</div>
+                <div style="font-size: 0.95rem; opacity: 0.8;">"The design is sublime and performance is above my expectations. Friends are already asking where I got it."</div>
                 <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.4;">Helpful? 👍 💬 Reply</div>
             </div>
             
             <div style="background: #111; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--p);">
                 <div style="color: var(--p); font-size: 0.9rem;">⭐⭐⭐⭐⭐</div>
-                <div style="font-weight: bold; margin: 5px 0;">Nicolas P. (Toronto)</div>
-                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">11 d</div>
+                <div style="font-weight: bold; margin: 5px 0;">Carole M. (Toronto)</div>
+                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">5 d</div>
+                <div style="font-weight: 700; margin-bottom: 10px;">📌 Best value for money</div>
+                <div style="font-size: 0.95rem; opacity: 0.8;">"Received very fast. The quality is definitely there, nothing like the cheap alternatives."</div>
+                <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.4;">Helpful? 👍 💬 Reply</div>
+            </div>
+            
+            <div style="background: #111; padding: 25px; margin-bottom: 20px; border-left: 3px solid var(--p);">
+                <div style="color: var(--p); font-size: 0.9rem;">⭐⭐⭐⭐</div>
+                <div style="font-weight: bold; margin: 5px 0;">Sophie B. (London)</div>
+                <div style="font-size: 0.7rem; opacity: 0.5; margin-bottom: 15px;">6 d</div>
                 <div style="font-weight: 700; margin-bottom: 10px;">📌 No scams, this is serious</div>
                 <div style="font-size: 0.95rem; opacity: 0.8;">"A lot of fear before paying, but it's transparent and effective. 10/10."</div>
                 <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.4;">Helpful? 👍 💬 Reply</div>
@@ -207,8 +219,8 @@
     </div>
 
     <a href="https://www.amazon.com/s?k=Cryotherapy+Chamber+Pro:+Unlock+the+Power+of+Cold+Therapy&tag=confortbure07-21" class="sticky-cta" onclick="track()" target="_blank">
-        <span>2639 $ | SEE REDUCED PRICE</span>
-        <span style="font-size: 0.8rem; background: #000; color: #fff; padding: 5px 10px;">-28%</span>
+        <span>1499 $ | SEE REDUCED PRICE</span>
+        <span style="font-size: 0.8rem; background: #000; color: #fff; padding: 5px 10px;">-40%</span>
     </a>
 
     <footer>&copy; 2026 AFFILMAX LUXURY - ALL RIGHTS RESERVED</footer>
